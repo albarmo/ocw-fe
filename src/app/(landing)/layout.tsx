@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, DM_Sans } from "next/font/google";
-import "./globals.css";
+import { DM_Sans } from "next/font/google";
+import Navbar from "@/components/layout/navigation/Navbar";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const dm_sans = DM_Sans({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
     title: "One Click Web",
     description: "Create your own website for any purposes",
@@ -17,7 +15,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={dm_sans.className}>{children}</body>
+            <body className={dm_sans.className}>
+                <Navbar />
+                {children}
+            </body>
         </html>
     );
 }
