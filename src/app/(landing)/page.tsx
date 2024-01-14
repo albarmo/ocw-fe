@@ -1,5 +1,6 @@
 import Captcha from "@/components/Captcha";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -33,8 +34,8 @@ export default function Home() {
                         Rp <span className="text-3xl font-bold">200.000</span>
                         /mo
                     </h2>
-                    <button className="p-2 w-6/12 bg-blue-400 text-white">
-                        Try Now
+                    <button className="p-2 w-6/12 bg-blue-400 text-white hover:bg-blue-900">
+                        <Link href={"/order-form/domain"}>Try Now</Link>
                     </button>
                     <p className="text-xs">30-Day Money-Back Guarantee</p>
                 </div>
